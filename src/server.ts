@@ -41,7 +41,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
           if (err){
             res.status(422).send(err)
           }
-          // deleteLocalFiles([filtered_image_path])
+          deleteLocalFiles([filtered_image_path])
         }
     )
     }
