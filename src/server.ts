@@ -39,14 +39,14 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       return res.status(200).sendFile(
         filtered_image_path, (err) => {
           if (err){
-            res.status(422).send(err)
+            res.status(422).send('Unable to process image')
           }
           deleteLocalFiles([filtered_image_path])
         }
     )
     }
     catch(err){
-      res.status(422).send(err)
+      res.status(422).send('Unable to process image')
     }
   }
   );
